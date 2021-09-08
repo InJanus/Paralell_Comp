@@ -1,61 +1,13 @@
-Total Number of Lines,10000
-Result 1 of 10
-MulTime,0.011372089385986328,=$B$1/B3,flop/sec,
-DivTime,0.011498689651489258,=$B$1/B4,flop/sec,
-AddTime,0.01129603385925293,=$B$1/B5,flop/sec,
-SubTime,0.009219169616699219,=$B$1/B6,flop/sec,
-TotalTime,0.5149016380310059,s
-Result 2 of 10
-MulTime,0.02649688720703125,=$B$1/B9,flop/sec,
-DivTime,0.025995731353759766,=$B$1/B10,flop/sec,
-AddTime,0.01668238639831543,=$B$1/B11,flop/sec,
-SubTime,0.015613317489624023,=$B$1/B12,flop/sec,
-TotalTime,0.8441517353057861,s
-Result 3 of 10
-MulTime,0.016219139099121094,=$B$1/B15,flop/sec,
-DivTime,0.01633143424987793,=$B$1/B16,flop/sec,
-AddTime,0.017815589904785156,=$B$1/B17,flop/sec,
-SubTime,0.015123605728149414,=$B$1/B18,flop/sec,
-TotalTime,0.7264947891235352,s
-Result 4 of 10
-MulTime,0.02120518684387207,=$B$1/B21,flop/sec,
-DivTime,0.028872251510620117,=$B$1/B22,flop/sec,
-AddTime,0.02928757667541504,=$B$1/B23,flop/sec,
-SubTime,0.021133899688720703,=$B$1/B24,flop/sec,
-TotalTime,1.1072721481323242,s
-Result 5 of 10
-MulTime,0.03450322151184082,=$B$1/B27,flop/sec,
-DivTime,0.03429222106933594,=$B$1/B28,flop/sec,
-AddTime,0.02442002296447754,=$B$1/B29,flop/sec,
-SubTime,0.026573657989501953,=$B$1/B30,flop/sec,
-TotalTime,1.235400676727295,s
-Result 6 of 10
-MulTime,0.02914285659790039,=$B$1/B33,flop/sec,
-DivTime,0.0321199893951416,=$B$1/B34,flop/sec,
-AddTime,0.02351522445678711,=$B$1/B35,flop/sec,
-SubTime,0.02995777130126953,=$B$1/B36,flop/sec,
-TotalTime,1.144521951675415,s
-Result 7 of 10
-MulTime,0.023222684860229492,=$B$1/B39,flop/sec,
-DivTime,0.025409221649169922,=$B$1/B40,flop/sec,
-AddTime,0.03928828239440918,=$B$1/B41,flop/sec,
-SubTime,0.0304412841796875,=$B$1/B42,flop/sec,
-TotalTime,1.3279428482055664,s
-Result 8 of 10
-MulTime,0.014265060424804688,=$B$1/B45,flop/sec,
-DivTime,0.015331506729125977,=$B$1/B46,flop/sec,
-AddTime,0.016098976135253906,=$B$1/B47,flop/sec,
-SubTime,0.019378662109375,=$B$1/B48,flop/sec,
-TotalTime,0.6798045635223389,s
-Result 9 of 10
-MulTime,0.021888017654418945,=$B$1/B51,flop/sec,
-DivTime,0.04097890853881836,=$B$1/B52,flop/sec,
-AddTime,0.0383450984954834,=$B$1/B53,flop/sec,
-SubTime,0.023303508758544922,=$B$1/B54,flop/sec,
-TotalTime,1.2245779037475586,s
-Result 10 of 10
-MulTime,0.025112152099609375,=$B$1/B57,flop/sec,
-DivTime,0.016533851623535156,=$B$1/B58,flop/sec,
-AddTime,0.025036096572875977,=$B$1/B59,flop/sec,
-SubTime,0.025216341018676758,=$B$1/B60,flop/sec,
-TotalTime,0.931025505065918,s
+Total Number of Lines,1000000
+Result 1 of 2
+MulTime,1.8817248344421387,=$B$1/B3,flop/sec,
+DivTime,0.0,=$B$1/B4,flop/sec,
+AddTime,1.8924522399902344,=$B$1/B5,flop/sec,
+SubTime,0.0,=$B$1/B6,flop/sec,
+TotalTime,11.778013229370117,s
+Result 2 of 2
+MulTime,1.9673705101013184,=$B$1/B9,flop/sec,
+DivTime,1.8474845886230469,=$B$1/B10,flop/sec,
+AddTime,1.9767048358917236,=$B$1/B11,flop/sec,
+SubTime,1.8220441341400146,=$B$1/B12,flop/sec,
+TotalTime,11.915306806564331,s

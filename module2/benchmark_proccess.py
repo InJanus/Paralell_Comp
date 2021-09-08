@@ -58,17 +58,21 @@ def main(totaliteration):
         # split into PNUMBER lists
 
         # p(target=mul,args=(splitlists.copy().pop(0), len(splitlists.copy().pop(0))))
-        q = Queue()
+        # q = Queue()
         q.put(ret)
         start_time = t.time()
-        mulp = p(target=mul, args=(mydatamaster.copy(), lineslength, q))
-        divp = p(target=div, args=(mydatamaster.copy(), lineslength, q))
-        addp = p(target=add, args=(mydatamaster.copy(), lineslength, q))
-        subp = p(target=sub, args=(mydatamaster.copy(), lineslength, q))
-        mulp.start();divp.start();addp.start();subp.start()
+        mulp = p(target=mul, args=(mydatamaster, lineslength, q,))
+        mulp.start()
+        divp = p(target=div, args=(mydatamaster, lineslength, q,))
+        divp.start()
+        addp = p(target=add, args=(mydatamaster, lineslength, q,))
+        addp.start()
+        subp = p(target=sub, args=(mydatamaster, lineslength, q,))
+        subp.start()
+        # mulp.start();divp.start();addp.start();subp.start()
         mulp.join();divp.join();addp.join();subp.join()
-        results = q.get()
         total_time = t.time() - start_time
+        results = q.get()
         multime = results['mul']
         divtime = results['div']
         addtime = results['add']
@@ -93,7 +97,7 @@ def mul(mydata, linecount, q):
     ret = q.get()
     start_time = t.time()
     for i in range(linecount):
-        mydataline = mydata.pop()
+        mydataline = mydata[i]
         float(mydataline[0])*float(mydataline[1])
     total_time = t.time() - start_time;
     ret['mul'] = total_time
@@ -104,7 +108,7 @@ def div(mydata, linecount, q):
     ret = q.get()
     start_time = t.time()
     for i in range(linecount):
-        mydataline = mydata.pop()
+        mydataline = mydata[i]
         float(mydataline[0])/float(mydataline[1])
     total_time = t.time() - start_time;
     ret['div'] = total_time
@@ -115,7 +119,7 @@ def add(mydata, linecount, q):
     ret = q.get()
     start_time = t.time()
     for i in range(linecount):
-        mydataline = mydata.pop()
+        mydataline = mydata[i]
         float(mydataline[0])+float(mydataline[1])
     total_time = t.time() - start_time;
     ret['add'] = total_time
@@ -126,7 +130,7 @@ def sub(mydata, linecount, q):
     ret = q.get()
     start_time = t.time()
     for i in range(linecount):
-        mydataline = mydata.pop()
+        mydataline = mydata[i]
         float(mydataline[0])-float(mydataline[1])
     total_time = t.time() - start_time;
     ret['sub'] = total_time
@@ -134,5 +138,4 @@ def sub(mydata, linecount, q):
     return total_time
 
 if __name__ == '__main__':
-
     main(int(sys.argv[1]))
