@@ -36,7 +36,7 @@ def main(totaliteration):
         mydatamaster.append([leftdata, rightdata])
 
     f.close()
-    f = open('data/results.csv', 'w')
+    f = open('data/results_proccess.csv', 'w')
 
     # this is for future speed up
     # splitlists = []
