@@ -1,9 +1,12 @@
 import tqdm as tq
 import time as t
 import sys
-import os
-from multiprocessing import Process as p
-import multiprocessing
+
+# from multiprocessing import Process as p
+import queue as qu
+from threading import Thread as p
+
+# 9/8 - this is a copy of bechmark from the multiproccessing side to change multi proccessing to multithreading to see if it is any faster
 
 ret = {'mul': 0.0, 'div': 0.0, 'add': 0.0, 'sub': 0.0}
 
@@ -17,7 +20,7 @@ ret = {'mul': 0.0, 'div': 0.0, 'add': 0.0, 'sub': 0.0}
 #     return returnlist
 
 def main(totaliteration):
-    q = multiprocessing.Queue()
+    q = qu.Queue()
     q.put(ret)
     # where the benchmark happens
     # just get some floating point operations in here to compute
@@ -57,6 +60,9 @@ def main(totaliteration):
         # split into PNUMBER lists
 
         # p(target=mul,args=(splitlists.copy().pop(0), len(splitlists.copy().pop(0))))
+
+        q = qu.Queue()
+        q.put(ret)
         start_time = t.time()
         mulp = p(target=mul, args=(mydatamaster.copy(), lineslength, q))
         divp = p(target=div, args=(mydatamaster.copy(), lineslength, q))
