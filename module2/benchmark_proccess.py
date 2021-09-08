@@ -1,7 +1,6 @@
 import tqdm as tq
 import time as t
 import sys
-import os
 from multiprocessing import Process as p
 from queue import Queue as qu
 

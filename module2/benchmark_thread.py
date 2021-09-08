@@ -3,7 +3,7 @@ import time as t
 import sys
 
 # from multiprocessing import Process as p
-import queue as qu
+from queue import Queue as qu
 from threading import Thread as p
 
 # 9/8 - this is a copy of bechmark from the multiproccessing side to change multi proccessing to multithreading to see if it is any faster
