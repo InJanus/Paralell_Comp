@@ -1,8 +1,10 @@
 import tqdm as tq
 import time as t
 import sys
+
+from multiprocessing import Queue
 from multiprocessing import Process as p
-from queue import Queue as qu
+
 
 ret = {'mul': 0.0, 'div': 0.0, 'add': 0.0, 'sub': 0.0}
 
@@ -16,6 +18,8 @@ ret = {'mul': 0.0, 'div': 0.0, 'add': 0.0, 'sub': 0.0}
 #     return returnlist
 
 def main(totaliteration):
+    q = Queue()
+    q.put(ret)
     # where the benchmark happens
     # just get some floating point operations in here to compute
     # thinking a text file import of datapoints and just multiply them over and over and then time it
@@ -54,7 +58,7 @@ def main(totaliteration):
         # split into PNUMBER lists
 
         # p(target=mul,args=(splitlists.copy().pop(0), len(splitlists.copy().pop(0))))
-        q = qu.Queue()
+        q = Queue()
         q.put(ret)
         start_time = t.time()
         mulp = p(target=mul, args=(mydatamaster.copy(), lineslength, q))
