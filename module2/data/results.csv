@@ -1,0 +1,7 @@
+Total Number of Lines,10000000
+Result 1 of 1
+MulTime,19.999974012374878,=$B$1/B3,flop/sec,
+DivTime,18.26746892929077,=$B$1/B4,flop/sec,
+AddTime,18.882986545562744,=$B$1/B5,flop/sec,
+SubTime,16.4116427898407,=$B$1/B6,flop/sec,
+TotalTime,124.52383732795715,s
