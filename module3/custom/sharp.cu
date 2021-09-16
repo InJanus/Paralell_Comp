@@ -9,7 +9,7 @@
 
 double kernel[] = {0.0,-0.5,0.0,-0.5,3.0,-0.5,0.0,-0.5,0.0};
 
-int main(void){
+int main(int argc, char** argv){
     int width, height, channels;
 
     if(argc != 2){
