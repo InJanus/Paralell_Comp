@@ -3,6 +3,9 @@ from numba import cuda
 from numba.cuda.cudadrv.driver import driver
 import math
 from numba.np import numpy_support as nps
+import numpy as np
+
+N = 1024    #size of mat
 
 def transpose(a, b=None):
     """Compute the transpose of 'a' and store it into 'b', if given,
@@ -60,3 +63,31 @@ def transpose(a, b=None):
     kernel[blocks, threads, stream](a, b)
 
     return b
+
+def checkTranspose(a ,b):
+    result = 0
+    for i in range(N):
+        for j in range(N):
+            if a.get(i+j*N) != b.get(i+j*N):
+                result = 1
+    return result
+
+if __name__ == "__main__":
+    # generate array
+    
+    myinput = []
+    temp = []
+    for i in range(N):
+        for j in range(N):
+            myinput.append(i*j)
+        temp.append(myinput)
+        myinput = []
+
+    # for i in range(N):
+    #     print(myinput[i*N:(i+1)*N])
+    print(temp)
+    print(np.array(temp).shape)
+    mytranspose = transpose(np.array(temp))
+    print(mytranspose)
+    print("is it a transpose? %d" %(checkTranspose(myinput, mytranspose)))
+
