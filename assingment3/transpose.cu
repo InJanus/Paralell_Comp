@@ -61,21 +61,26 @@ transpose_parallel_per_row(float in[], float out[]){
 __global__ void 
 transpose_parallel_per_element_tiled(float in[], float out[])
 {
-	//first get the flip of the transpose
-	int i = threadIdx.x;
-
-	// for(int j=0; j < N; j++){
-	//     out[j + i*N] = in[i + j*N];
-    // }
-	// printf("%i", i);
-	//printf("%f", out[0]);
-	//ToDo
+	int x = threadIdx.x + (blockDim.x*blockIdx.x);
+	int y = threadIdx.y + (blockDim.y*blockIdx.y);
+	out[x+y*N] = in[y+x*N];	
 }
 
 __global__ void 
 transpose_parallel_per_element_tiled_shared(float in[], float out[])
 {
-	//ToDo
+	__shared__ float *in_use;
+	in_use = in;
+	__shared__ float *out_use;
+	out_use = out;
+
+	int x = threadIdx.x + (blockDim.x*blockIdx.x);
+	int y = threadIdx.y + (blockDim.y*blockIdx.y);
+	out_use[x+y*N] = in_use[y+x*N];
+
+	__syncthreads();
+	
+	out = out_use;
 }
 
 int main(int argc, char **argv){
@@ -116,7 +121,7 @@ int main(int argc, char **argv){
     const int K= 16;
     dim3 blocks_tiled(N/K,N/K);
 	dim3 threads_tiled(K,K);
-	printf("%i:%i", blocks_tiled, threads_tiled);
+	//printf("%i:%i\n", blocks_tiled, threads_tiled);
 	timer.Start();
 	transpose_parallel_per_element_tiled<<<blocks_tiled,threads_tiled>>>(d_in, d_out);//global memory
 	timer.Stop();
@@ -129,6 +134,7 @@ int main(int argc, char **argv){
 
     dim3 blocks_tiled_sh(N/K,N/K);
 	dim3 threads_tiled_sh(K,K);
+	//printf("%i:%i\n", blocks_tiled_sh, threads_tiled_sh);
     timer.Start();
 	transpose_parallel_per_element_tiled_shared<<<blocks_tiled_sh,threads_tiled_sh>>>(d_in, d_out);//shared memory
 	timer.Stop();
