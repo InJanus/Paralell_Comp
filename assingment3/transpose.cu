@@ -62,7 +62,12 @@ __global__ void
 transpose_parallel_per_element_tiled(float in[], float out[])
 {
 	//first get the flip of the transpose
-	printf("%f", in[0]);
+	int i = threadIdx.x;
+
+	// for(int j=0; j < N; j++){
+	//     out[j + i*N] = in[i + j*N];
+    // }
+	printf("%i", i);
 	//printf("%f", out[0]);
 	//ToDo
 }
