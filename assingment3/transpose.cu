@@ -67,7 +67,7 @@ transpose_parallel_per_element_tiled(float in[], float out[])
 	// for(int j=0; j < N; j++){
 	//     out[j + i*N] = in[i + j*N];
     // }
-	printf("%i", i);
+	// printf("%i", i);
 	//printf("%f", out[0]);
 	//ToDo
 }
@@ -116,6 +116,7 @@ int main(int argc, char **argv){
     const int K= 16;
     dim3 blocks_tiled(N/K,N/K);
 	dim3 threads_tiled(K,K);
+	printf("%i:%i", blocks_tiled, threads_tiled);
 	timer.Start();
 	transpose_parallel_per_element_tiled<<<blocks_tiled,threads_tiled>>>(d_in, d_out);//global memory
 	timer.Stop();
