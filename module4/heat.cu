@@ -153,6 +153,10 @@ void anim_exit( DataBlock *d ) {
     HANDLE_ERROR( cudaEventDestroy( d->stop ) );
 }
 
+struct point{
+    int x;
+    int y;
+};
 
 int main( void ) {
     DataBlock   data;
@@ -190,12 +194,20 @@ int main( void ) {
 
     // intialize the constant data
     float *temp = (float*)malloc( imageSize );
+    point p1,p2,p3;
+    p1.x = 100; p1.y = 412;
+    p2.x = 231; p2.y = 100;
+    p3.x = 412; p3.y = 412;
     for (int i=0; i<DIM*DIM; i++) {
         temp[i] = 0;
         int x = i % DIM;
         int y = i / DIM;
-        if ((x>300) && (x<600) && (y>310) && (y<601))
+
+        if ((y<=412) && (y>=((p2.y/p1.y)/(p2.x-p1.x))*x+(y-(x*(p2.y/p1.y)/(p2.x-p1.x)))) && (y>=((p3.y/p2.y)/(p3.x-p2.x))*x+(y-(x*(p3.y/p2.y)/(p3.x-p2.x))))){
             temp[i] = MAX_TEMP;
+        }
+        // if ((x>300) && (x<600) && (y>310) && (y<601))
+        //     temp[i] = MAX_TEMP;
     }
     temp[DIM*100+100] = (MAX_TEMP + MIN_TEMP)/2;
     temp[DIM*700+100] = MIN_TEMP;
