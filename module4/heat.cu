@@ -15,10 +15,10 @@
 
 
 #include "cuda.h"
-#include "../common/book.h"
-#include "../common/cpu_anim.h"
+#include "common/book.h"
+#include "common/cpu_anim.h"
 
-#define DIM 1024
+#define DIM 512
 #define PI 3.1415926535897932f
 #define MAX_TEMP 1.0f
 #define MIN_TEMP 0.0001f
