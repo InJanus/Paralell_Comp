@@ -203,7 +203,7 @@ int main( void ) {
         int x = i % DIM;
         int y = i / DIM;
 
-        if ((y<=412) && (y>=((p2.y/p1.y)/(p2.x-p1.x))*x+(y-(x*(p2.y/p1.y)/(p2.x-p1.x)))) && (y>=((p3.y/p2.y)/(p3.x-p2.x))*x+(y-(x*(p3.y/p2.y)/(p3.x-p2.x))))){
+        if ((y<=412) && (y>=((p2.y/p1.y)/(p2.x-p1.x))*x+(y-(x*(p2.y/p1.y)/(p2.x-p1.x)))) && (y<=((p3.y/p2.y)/(p3.x-p2.x))*x+(y-(x*(p3.y/p2.y)/(p3.x-p2.x))))){
             temp[i] = MAX_TEMP;
         }
         // if ((x>300) && (x<600) && (y>310) && (y<601))
