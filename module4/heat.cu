@@ -153,11 +153,6 @@ void anim_exit( DataBlock *d ) {
     HANDLE_ERROR( cudaEventDestroy( d->stop ) );
 }
 
-struct point{
-    int x;
-    int y;
-};
-
 int main( void ) {
     DataBlock   data;
     CPUAnimBitmap bitmap( DIM, DIM, &data );
@@ -194,10 +189,6 @@ int main( void ) {
 
     // intialize the constant data
     float *temp = (float*)malloc( imageSize );
-    point p1,p2,p3;
-    p1.x = 100; p1.y = 412;
-    p2.x = 231; p2.y = 100;
-    p3.x = 412; p3.y = 412;
     for (int i=0; i<DIM*DIM; i++) {
         temp[i] = 0;
         int x = i % DIM;
