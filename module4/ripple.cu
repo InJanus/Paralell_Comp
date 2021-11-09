@@ -36,8 +36,8 @@ __global__ void kernel( unsigned char *ptr, int ticks ) {
     //                                     (d/10.0f + 1.0f));
     //color code here
     unsigned char red = (unsigned char)(128.0f+127.0f*cos(d/10.0f-ticks/7.0f)/(d/10.0f+1.0f));
-    unsigned char green = 0;//(unsigned char)(128.0f+127.0f*cos(d/10.0f-ticks/7.0f)/(d/10.0f+1.0f));
-    unsigned char blue = 0;//(unsigned char)(128.0f+127.0f*cos(d/10.0f-ticks/7.0f)/(d/10.0f+1.0f));  
+    unsigned char green = (unsigned char)(128.0f+127.0f*cos((d/10.0f-ticks/7.0f)+30.0f)/(d/10.0f+1.0f));
+    unsigned char blue = (unsigned char)(128.0f+127.0f*cos((d/10.0f-ticks/7.0f)+60.0f)/(d/10.0f+1.0f));  
     ptr[offset*4 + 0] = red;
     ptr[offset*4 + 1] = green;
     ptr[offset*4 + 2] = blue;
