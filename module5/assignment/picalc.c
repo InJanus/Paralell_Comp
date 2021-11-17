@@ -27,6 +27,11 @@ int main(int argc,char *argv[])
     fprintf(stdout,"Process %d of %d on %s\n",
 	    myid, numprocs, processor_name);
 
+    while(*argv){
+        printf(*argv);
+        argv++;
+    }
+    
     int j = 1;
     if(myid == 0){
         while(*argv){
@@ -36,9 +41,6 @@ int main(int argc,char *argv[])
             argv++;
         }
     }
-    
-    
-
     
     n = 0;
     //for (int j = 1; j <= 9; j++){
