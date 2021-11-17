@@ -12,7 +12,7 @@ double f(double a)
 
 int main(int argc,char *argv[])
 {
-    unsigned int done = 0, n, myid, numprocs, i, j;
+    unsigned int n, myid, numprocs, i, j;
     double PI25DT = 3.141592653589793238462643;
     double mypi, pi, h, sum, x;
     double startwtime = 0.0, endwtime;
@@ -39,7 +39,6 @@ int main(int argc,char *argv[])
         }
         MPI_Bcast(&n, 1, MPI_INT, 0, MPI_COMM_WORLD);
         if (n == 0){
-            //done = 1;
             j++;
         }else{
             h   = 1.0 / (double) n;
