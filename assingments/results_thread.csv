@@ -1,0 +1,61 @@
+Total Number of Lines,10000000
+Result 1 of 10
+MulTime,9.924870014190674,=$B$1/B3,flop/sec,
+DivTime,10.373319149017334,=$B$1/B4,flop/sec,
+AddTime,10.679229497909546,=$B$1/B5,flop/sec,
+SubTime,10.711306095123291,=$B$1/B6,flop/sec,
+TotalTime,42.1207435131073,s
+Result 2 of 10
+MulTime,10.379107236862183,=$B$1/B9,flop/sec,
+DivTime,10.305967330932617,=$B$1/B10,flop/sec,
+AddTime,10.098346471786499,=$B$1/B11,flop/sec,
+SubTime,10.043430089950562,=$B$1/B12,flop/sec,
+TotalTime,41.511571407318115,s
+Result 3 of 10
+MulTime,9.974478244781494,=$B$1/B15,flop/sec,
+DivTime,10.052377462387085,=$B$1/B16,flop/sec,
+AddTime,10.062733888626099,=$B$1/B17,flop/sec,
+SubTime,10.002404689788818,=$B$1/B18,flop/sec,
+TotalTime,40.78916668891907,s
+Result 4 of 10
+MulTime,10.149009466171265,=$B$1/B21,flop/sec,
+DivTime,9.846137046813965,=$B$1/B22,flop/sec,
+AddTime,10.097223281860352,=$B$1/B23,flop/sec,
+SubTime,9.802947521209717,=$B$1/B24,flop/sec,
+TotalTime,40.60804724693298,s
+Result 5 of 10
+MulTime,10.067157745361328,=$B$1/B27,flop/sec,
+DivTime,10.010417461395264,=$B$1/B28,flop/sec,
+AddTime,10.104823112487793,=$B$1/B29,flop/sec,
+SubTime,10.22670030593872,=$B$1/B30,flop/sec,
+TotalTime,40.97550630569458,s
+Result 6 of 10
+MulTime,10.290119409561157,=$B$1/B33,flop/sec,
+DivTime,10.105255842208862,=$B$1/B34,flop/sec,
+AddTime,10.08270788192749,=$B$1/B35,flop/sec,
+SubTime,10.138724088668823,=$B$1/B36,flop/sec,
+TotalTime,41.27119302749634,s
+Result 7 of 10
+MulTime,9.922582626342773,=$B$1/B39,flop/sec,
+DivTime,9.83777666091919,=$B$1/B40,flop/sec,
+AddTime,10.0014066696167,=$B$1/B41,flop/sec,
+SubTime,9.808132648468018,=$B$1/B42,flop/sec,
+TotalTime,40.17987251281738,s
+Result 8 of 10
+MulTime,9.831516027450562,=$B$1/B45,flop/sec,
+DivTime,9.735305070877075,=$B$1/B46,flop/sec,
+AddTime,10.050283670425415,=$B$1/B47,flop/sec,
+SubTime,9.66255807876587,=$B$1/B48,flop/sec,
+TotalTime,39.83692812919617,s
+Result 9 of 10
+MulTime,9.964317798614502,=$B$1/B51,flop/sec,
+DivTime,9.817262411117554,=$B$1/B52,flop/sec,
+AddTime,9.898218154907227,=$B$1/B53,flop/sec,
+SubTime,9.995766878128052,=$B$1/B54,flop/sec,
+TotalTime,40.22557592391968,s
+Result 10 of 10
+MulTime,9.977476835250854,=$B$1/B57,flop/sec,
+DivTime,9.852513313293457,=$B$1/B58,flop/sec,
+AddTime,10.108753204345703,=$B$1/B59,flop/sec,
+SubTime,9.68362808227539,=$B$1/B60,flop/sec,
+TotalTime,40.19536852836609,s

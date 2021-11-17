@@ -1,13 +1,13 @@
 Total Number of Lines,1000000
 Result 1 of 2
-MulTime,1.8817248344421387,=$B$1/B3,flop/sec,
+MulTime,0.7426774501800537,=$B$1/B3,flop/sec,
 DivTime,0.0,=$B$1/B4,flop/sec,
-AddTime,1.8924522399902344,=$B$1/B5,flop/sec,
+AddTime,0.766697883605957,=$B$1/B5,flop/sec,
 SubTime,0.0,=$B$1/B6,flop/sec,
-TotalTime,11.778013229370117,s
+TotalTime,7.464786529541016,s
 Result 2 of 2
-MulTime,1.9673705101013184,=$B$1/B9,flop/sec,
-DivTime,1.8474845886230469,=$B$1/B10,flop/sec,
-AddTime,1.9767048358917236,=$B$1/B11,flop/sec,
-SubTime,1.8220441341400146,=$B$1/B12,flop/sec,
-TotalTime,11.915306806564331,s
+MulTime,0.7656962871551514,=$B$1/B9,flop/sec,
+DivTime,0.7546865940093994,=$B$1/B10,flop/sec,
+AddTime,0.7596919536590576,=$B$1/B11,flop/sec,
+SubTime,0.7696998119354248,=$B$1/B12,flop/sec,
+TotalTime,7.444767951965332,s
