@@ -52,7 +52,7 @@ int main(int argc,char *argv[])
 
             MPI_Reduce(&mypi, &pi, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
             if (myid == 0){
-                printf("Interval Value : %i\n", pow(10,j));
+                printf("Interval Value : %i : J : %i\n", n, j);
                 printf("pi is approximately %.16f, Error is %.16f\n", pi, fabs(pi - PI25DT));
                 endwtime = MPI_Wtime();
                 printf("wall clock time = %f\n", endwtime-startwtime);	       
