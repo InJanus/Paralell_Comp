@@ -28,6 +28,18 @@ int main(int argc,char *argv[])
 	    myid, numprocs, processor_name);
 
     int j = 1;
+    if(myid == 0){
+        while(*argv){
+            if(*argv.strcmp("-i")){
+                j = atoi(*(argv+1));
+            }
+            argv++;
+        }
+    }
+    
+    
+
+    
     n = 0;
     //for (int j = 1; j <= 9; j++){
         //n = pow(10,j);
