@@ -27,7 +27,7 @@ int main(int argc,char *argv[])
 	    myid, numprocs, processor_name);
 
     n = 0;
-    for (int i = 1; i <= 10; i++){
+    for (int j = 1; j <= 10; j++){
         while (!done)
         {
             if (myid == 0)
@@ -35,7 +35,7 @@ int main(int argc,char *argv[])
 
                 //printf("Enter the number of intervals: (0 quits) ");
                 //scanf("%d",&n);
-                n = i;
+                n = j;
 
 
                 //change the n over the course of 10 intervals
