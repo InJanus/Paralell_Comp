@@ -26,22 +26,8 @@ int main(int argc,char *argv[])
 
     fprintf(stdout,"Process %d of %d on %s\n",
 	    myid, numprocs, processor_name);
-
-    while(*argv){
-        printf("%s\n",*argv);
-        argv++;
-    }
     
     int j = 1;
-    if(myid == 0){
-        while(*argv){
-            if(*argv.strcmp("-i")){
-                j = atoi(*(argv+1));
-            }
-            argv++;
-        }
-    }
-    
     n = 0;
     //for (int j = 1; j <= 9; j++){
         //n = pow(10,j);
@@ -57,13 +43,14 @@ int main(int argc,char *argv[])
 
                 if (n==0){
                     n=pow(10,j);
+                    j++;
                 }else{
                     n=0;
                 }
                 startwtime = MPI_Wtime();
             }
             MPI_Bcast(&n, 1, MPI_INT, 0, MPI_COMM_WORLD);
-            if (n == 0){
+            if (n == 0 && j==9){
                 done = 1;
             }else{
                 h   = 1.0 / (double) n;
