@@ -28,7 +28,7 @@ int main(int argc,char *argv[])
 	    myid, numprocs, processor_name);
 
     while(*argv){
-        printf(*argv);
+        printf("%s\n",*argv);
         argv++;
     }
     
