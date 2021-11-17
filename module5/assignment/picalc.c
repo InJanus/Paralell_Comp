@@ -12,10 +12,10 @@ double f(double a)
 
 int main(int argc,char *argv[])
 {
-    unsigned long long n;
+    unsigned int n;
     int myid, numprocs, i, j;
     double PI25DT = 3.141592653589793238462643;
-    long double mypi, pi, h, sum, x;
+    double mypi, pi, h, sum, x;
     double startwtime = 0.0, endwtime;
     int  namelen;
     char processor_name[MPI_MAX_PROCESSOR_NAME];
