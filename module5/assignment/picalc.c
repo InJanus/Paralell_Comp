@@ -28,7 +28,7 @@ int main(int argc,char *argv[])
 	    myid, numprocs, processor_name);
 
     n = 0;
-    for (int j = 1; j <= 10; j++){
+    for (int j = 1; j <= 9; j++){
         n = pow(10,j);
         printf("interval %i or 10^%i\n", n, j);
         while (!done){
