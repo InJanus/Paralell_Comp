@@ -30,7 +30,7 @@ int main(int argc,char *argv[])
     n = 0;
     for (int j = 1; j <= 10; j++){
         n = pow(10,j);
-        printf("interval %i or 10^%i", n, j);
+        printf("interval %i or 10^%i\n", n, j);
         while (!done){
             if (myid == 0){
 
