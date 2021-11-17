@@ -12,7 +12,7 @@ double f(double a)
 
 int main(int argc,char *argv[])
 {
-    int done = 0, n, myid, numprocs, i;
+    int done = 0, n, myid, numprocs, i, j;
     double PI25DT = 3.141592653589793238462643;
     double mypi, pi, h, sum, x;
     double startwtime = 0.0, endwtime;
@@ -26,14 +26,12 @@ int main(int argc,char *argv[])
 
     fprintf(stdout,"Process %d of %d on %s\n", myid, numprocs, processor_name);
     
-    int j = 1;
+    j = 1;
     n = 0;
-    while (!done){
+    while (j < 11){
         if (myid == 0){
-            printf("%s\n", *(argv+1));
             if (n==0){
                 n=pow(10,j);
-                //j++;
             }else{
                 n=0;
             }
@@ -41,7 +39,8 @@ int main(int argc,char *argv[])
         }
         MPI_Bcast(&n, 1, MPI_INT, 0, MPI_COMM_WORLD);
         if (n == 0){
-            done = 1;
+            //done = 1;
+            j++;
         }else{
             h   = 1.0 / (double) n;
             sum = 0.0;
