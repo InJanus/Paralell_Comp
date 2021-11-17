@@ -27,11 +27,10 @@ int main(int argc,char *argv[])
     fprintf(stdout,"Process %d of %d on %s\n",
 	    myid, numprocs, processor_name);
 
-    int j = 1;
     n = 0;
     for (int j = 1; j <= 9; j++){
         //n = pow(10,j);
-        printf("interval %i or 10^%i\n", n, j);
+        //printf("interval %i or 10^%i\n", n, j);
         while (!done){
             if (myid == 0){
 
@@ -42,7 +41,7 @@ int main(int argc,char *argv[])
                 //change the n over the course of 10 intervals
 
                 if (n==0){
-                    n=pow(10,j);;
+                    n=pow(10,j);
                 }else{
                     n=0;
                 }
