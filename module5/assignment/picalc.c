@@ -30,7 +30,7 @@ int main(int argc,char *argv[])
     n = 0;
     while (!done){
         if (myid == 0){
-            printf("%s", *argv);
+            printf("%s\n", *argv);
             if (n==0){
                 n=pow(10,j);
                 //j++;
