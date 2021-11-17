@@ -2,7 +2,8 @@
 #include "mpi.h"
 #include <stdio.h>
 #include <stdlib.h>
- double f(double);
+#include <math.h>
+double f(double);
 
 double f(double a)
 {
@@ -28,7 +29,8 @@ int main(int argc,char *argv[])
 
     n = 0;
     for (int j = 1; j <= 10; j++){
-        n = j;
+        n = pow(10,j);
+        printf("interval")
         while (!done){
             if (myid == 0){
 
